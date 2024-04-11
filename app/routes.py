@@ -12,6 +12,7 @@ def create_hotel_route(hotel: HotelCreate):
     hotel_id = create_hotel(hotel.dict())
     return {**hotel.dict(), "id": str(hotel_id), "rooms": []}
 
+
 @router.post("/hotels/{hotel_id}/add-room/", response_model=Room)
 def add_room_route(hotel_id: str, room: RoomCreate):
     # Ensure the hotel_id is stored with the room
