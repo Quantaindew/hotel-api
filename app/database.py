@@ -4,7 +4,6 @@ from bson import ObjectId
 from .config import settings
 from datetime import datetime
 
-
 client = MongoClient(settings.mongodb_uri)
 db = client[settings.database_name]
 
